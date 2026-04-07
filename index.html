@@ -299,6 +299,72 @@
   }
   .proj-link:hover { gap: 0.55rem; color: var(--accent2); }
 
+  /* SchemaMind featured card styles */
+  .proj-card--featured {
+    border: 2px solid var(--border2);
+    background: linear-gradient(160deg, #f8fbff 0%, #eff6ff 100%);
+    position: relative;
+  }
+  .proj-card--featured:hover {
+    border-color: var(--accent);
+  }
+  .proj-card-top {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  .proj-chip--new {
+    background: linear-gradient(135deg, var(--accent), #2563eb);
+    color: #fff;
+    border: none;
+  }
+  .proj-live-badge {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.22rem 0.65rem;
+    background: #dcfce7; border: 1px solid #86efac;
+    border-radius: 100px;
+    font-size: 0.7rem; font-weight: 600; color: #15803d;
+    letter-spacing: 0.06em;
+  }
+  .proj-live-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #16a34a;
+    animation: pulse-green 2s infinite;
+  }
+  @keyframes pulse-green {
+    0%,100% { box-shadow: 0 0 0 0 rgba(22,163,74,0.5); }
+    50%      { box-shadow: 0 0 0 5px rgba(22,163,74,0); }
+  }
+  .proj-tech-row {
+    display: flex; flex-wrap: wrap; gap: 0.4rem;
+    margin-top: 1rem;
+  }
+  .proj-tech {
+    padding: 0.22rem 0.65rem;
+    background: #ffffff; border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 0.72rem; font-weight: 500; color: var(--muted);
+  }
+  .proj-links-row {
+    display: flex; align-items: center; gap: 1.2rem;
+    margin-top: 1.2rem;
+  }
+  .proj-link--primary {
+    padding: 0.5rem 1.1rem;
+    background: var(--accent); color: #fff !important;
+    border-radius: 6px;
+    font-size: 0.82rem; font-weight: 500;
+    box-shadow: 0 2px 10px rgba(29,78,216,0.25);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s !important;
+    gap: 0.4rem !important;
+  }
+  .proj-link--primary:hover {
+    background: var(--accent2) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 16px rgba(29,78,216,0.35) !important;
+    color: #fff !important;
+    gap: 0.6rem !important;
+  }
+
   /* ── CONTACT ── */
   .contact-outer { background: #f8faff; }
   .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
@@ -524,6 +590,35 @@
         <p>Cleaned and pre-processed 3+ datasets during a 3-week internship, applied supervised &amp; unsupervised algorithms with 80/20 splits, and delivered results using scikit-learn pipelines with Matplotlib and Seaborn visualizations.</p>
         <a href="https://github.com/Tamilvanan260/" target="_blank" class="proj-link">View on GitHub <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
       </div>
+
+      <!-- SchemaMind — NEW PROJECT -->
+      <div class="proj-card proj-card--featured">
+        <div class="proj-card-top">
+          <span class="proj-chip proj-chip--new">AI &bull; Full Stack</span>
+          <span class="proj-live-badge">
+            <span class="proj-live-dot"></span>Live
+          </span>
+        </div>
+        <h3>SchemaMind &mdash; AI Database Explorer</h3>
+        <p>AI-powered database management tool that lets non-technical users query databases using plain English. Type a question, the AI (Groq / Llama 3.3) generates and executes the SQL instantly &mdash; no SQL knowledge needed. Built with Next.js, PostgreSQL (Neon), and deployed on Vercel.</p>
+        <div class="proj-tech-row">
+          <span class="proj-tech">Next.js</span>
+          <span class="proj-tech">Groq AI</span>
+          <span class="proj-tech">PostgreSQL</span>
+          <span class="proj-tech">Vercel</span>
+        </div>
+        <div class="proj-links-row">
+          <a href="https://schemamindd.vercel.app/" target="_blank" class="proj-link proj-link--primary">
+            Visit Live Site
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+          <a href="https://github.com/Tamilvanan260/" target="_blank" class="proj-link">
+            GitHub
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
